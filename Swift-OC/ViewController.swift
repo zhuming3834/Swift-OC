@@ -14,12 +14,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+//MARK:跳转到下一页
+    @IBAction func nextBtnClick(sender: AnyObject) {
+        let ocVC = OCViewController()
+        ocVC.showText = "Swift-OC"
+        self.presentViewController(ocVC, animated: true) { 
+            
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

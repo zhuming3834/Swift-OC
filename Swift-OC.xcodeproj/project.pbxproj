@@ -14,6 +14,8 @@
 		C31C3ACB1CD7419700CDB2DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C31C3AC91CD7419700CDB2DB /* LaunchScreen.storyboard */; };
 		C31C3AD61CD7419700CDB2DB /* Swift_OCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C3AD51CD7419700CDB2DB /* Swift_OCTests.swift */; };
 		C31C3AE11CD7419700CDB2DB /* Swift_OCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C3AE01CD7419700CDB2DB /* Swift_OCUITests.swift */; };
+		C31C3AF21CD7420200CDB2DB /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31C3AF01CD7420200CDB2DB /* OCViewController.m */; };
+		C31C3AF31CD7420200CDB2DB /* OCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31C3AF11CD7420200CDB2DB /* OCViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		C31C3ADC1CD7419700CDB2DB /* Swift-OCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-OCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31C3AE01CD7419700CDB2DB /* Swift_OCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_OCUITests.swift; sourceTree = "<group>"; };
 		C31C3AE21CD7419700CDB2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C31C3AEE1CD7420200CDB2DB /* Swift-OC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-OC-Bridging-Header.h"; sourceTree = "<group>"; };
+		C31C3AEF1CD7420200CDB2DB /* OCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		C31C3AF01CD7420200CDB2DB /* OCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		C31C3AF11CD7420200CDB2DB /* OCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,14 @@
 			children = (
 				C31C3AC01CD7419700CDB2DB /* AppDelegate.swift */,
 				C31C3AC21CD7419700CDB2DB /* ViewController.swift */,
+				C31C3AEF1CD7420200CDB2DB /* OCViewController.h */,
+				C31C3AF01CD7420200CDB2DB /* OCViewController.m */,
+				C31C3AF11CD7420200CDB2DB /* OCViewController.xib */,
 				C31C3AC41CD7419700CDB2DB /* Main.storyboard */,
 				C31C3AC71CD7419700CDB2DB /* Assets.xcassets */,
 				C31C3AC91CD7419700CDB2DB /* LaunchScreen.storyboard */,
 				C31C3ACC1CD7419700CDB2DB /* Info.plist */,
+				C31C3AEE1CD7420200CDB2DB /* Swift-OC-Bridging-Header.h */,
 			);
 			path = "Swift-OC";
 			sourceTree = "<group>";
@@ -234,6 +244,7 @@
 			files = (
 				C31C3ACB1CD7419700CDB2DB /* LaunchScreen.storyboard in Resources */,
 				C31C3AC81CD7419700CDB2DB /* Assets.xcassets in Resources */,
+				C31C3AF31CD7420200CDB2DB /* OCViewController.xib in Resources */,
 				C31C3AC61CD7419700CDB2DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +272,7 @@
 			files = (
 				C31C3AC31CD7419700CDB2DB /* ViewController.swift in Sources */,
 				C31C3AC11CD7419700CDB2DB /* AppDelegate.swift in Sources */,
+				C31C3AF21CD7420200CDB2DB /* OCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,10 +416,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Swift-OC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hgdq.Swift-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift-OC/Swift-OC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -415,10 +430,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Swift-OC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hgdq.Swift-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift-OC/Swift-OC-Bridging-Header.h";
 			};
 			name = Release;
 		};
